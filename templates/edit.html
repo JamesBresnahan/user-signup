@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/add-account" method="post">
+    <label>
+        username:
+        <input type="text" name="username" value={{user_name}}>
+        <span class='error'>{{error1}}</span>  
+    </label>
+    <br></br>
+    <label>
+        password
+       <input type = "password" name= "password"/>
+       <span class='error'>{{error2}}</span> 
+    </label>
+    <br></br>
+    <label>
+        verify password
+       <input type = "password" name= "verify-password"/>
+       <span class='error'>{{error3}}</span> 
+    </label>
+    <br></br>
+    <label>
+        email (optional)
+       <input type = "text" name= "email" value = '{{email}}'/>
+       <span class='error'>{{error4}}</span> 
+    </label>
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}
